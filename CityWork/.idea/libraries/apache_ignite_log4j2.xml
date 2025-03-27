@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="apache.ignite.log4j2" type="repository">
+    <properties maven-id="org.apache.ignite:ignite-log4j2:2.16.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-log4j2/2.16.0/ignite-log4j2-2.16.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/ignite/ignite-core/2.16.0/ignite-core-2.16.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/cache/cache-api/1.0.0/cache-api-1.0.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/annotations/16.0.3/annotations-16.0.3.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/logging/log4j/log4j-core/2.20.0/log4j-core-2.20.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
