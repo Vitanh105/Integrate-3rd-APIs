@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "cd37cffe-f679-4fa3-8ca1-f22dda31deaa",
+		"name": "Urbox",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31492006"
+	},
+	"item": [
+		{
+			"name": "Brand",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/brands",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"brands"
+					],
+					"query": [
+						{
+							"key": "cat_id",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "per_page",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "page_no",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Category",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "parent_id",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "lang",
+							"value": "vi",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GiftList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/gifts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"gifts"
+					],
+					"query": [
+						{
+							"key": "cat_id",
+							"value": "9",
+							"disabled": true
+						},
+						{
+							"key": "brand_id",
+							"value": "533",
+							"disabled": true
+						},
+						{
+							"key": "field",
+							"value": "content,note,office",
+							"disabled": true
+						},
+						{
+							"key": "lang",
+							"value": "vi",
+							"disabled": true
+						},
+						{
+							"key": "stock",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "per_page",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "page_no",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "title",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GiftDetail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/gifts/4870",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"gifts",
+						"4870"
+					],
+					"query": [
+						{
+							"key": "lang",
+							"value": "vi",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CartPayEVoucher",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ttphone\": \"0961184611\",\r\n    \"dataBuy\": [\r\n            {\r\n                \"priceId\": \"4870\",\r\n                \"quantity\": \"1\"\r\n            },\r\n            {\r\n                \"priceId\": \"4869\",\r\n                \"quantity\": \"1\"\r\n            }\r\n        ],\r\n    \"isSendSms\": 0,\r\n    \"site_user_id\": \"vanh123\",\r\n    \"transaction_id\": \"vanh123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cart/evoucher",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cart",
+						"evoucher"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CartPayVoucherV1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"site_user_id\": \"vanh123\",\r\n    \"ttphone\": \"0961184611\",\r\n    \"transaction_id\": \"vanh123\",\r\n    \"isSendSms\": 0,\r\n    \"dataBuy\": [\r\n            {\r\n                \"priceId\": \"4870\",\r\n                \"quantity\": \"1\"\r\n            },\r\n            {\r\n                \"priceId\": \"4869\",\r\n                \"quantity\": \"1\"\r\n            }\r\n        ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cart/voucher-v1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cart",
+						"voucher-v1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CartPayVoucherV2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"site_user_id\": \"vanh123\",\r\n    \"ttphone\": \"0961184611\",\r\n    \"ttfullname\": \"Bùi Việt Anh\",\r\n    \"transaction_id\": \"vanh123\",\r\n    \"isSendSms\": 1,\r\n    \"shipping_info_available\": 2,\r\n    \"dataBuy\": [\r\n            {\r\n                \"priceId\": \"4870\",\r\n                \"quantity\": \"1\"\r\n            },\r\n            {\r\n                \"priceId\": \"4869\",\r\n                \"quantity\": \"1\"\r\n            }\r\n        ],\r\n    \"city_id\": 52,\r\n    \"district_id\": 359,\r\n    \"ward_id\": 5539\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/cart/voucher-v2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cart",
+						"voucher-v2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCartList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/cart/getlist?site_user_id=vanh123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cart",
+						"getlist"
+					],
+					"query": [
+						{
+							"key": "site_user_id",
+							"value": "vanh123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetByTransaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/cart/getByTransaction?transaction_id=vanh123",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"cart",
+						"getByTransaction"
+					],
+					"query": [
+						{
+							"key": "transaction_id",
+							"value": "vanh123"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
