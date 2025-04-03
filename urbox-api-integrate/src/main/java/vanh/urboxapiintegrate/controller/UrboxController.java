@@ -22,7 +22,10 @@ public class UrboxController {
     private final CartPayVoucherP1Service cartPayVoucherP1Service;
     private final CartPayVoucherP2Service cartPayVoucherP2Service;
 
-    public UrboxController(UrboxService urboxService, CartPayVoucherService cartPayVoucherService, CartPayVoucherP1Service cartPayVoucherP1Service, CartPayVoucherP2Service cartPayVoucherP2Service) {
+    public UrboxController(UrboxService urboxService,
+                           CartPayVoucherService cartPayVoucherService,
+                           CartPayVoucherP1Service cartPayVoucherP1Service,
+                           CartPayVoucherP2Service cartPayVoucherP2Service) {
         this.urboxService = urboxService;
         this.cartPayVoucherService = cartPayVoucherService;
         this.cartPayVoucherP1Service = cartPayVoucherP1Service;
